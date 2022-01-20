@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable annotations -->
+    <context:annotation-config/>
+    <!-- From where to scan bean annotations -->
+    <context:component-scan base-package="example.spring.springConcept"/>
+
+
+        <!-- bean definitions here -->
+        <bean id="calculatorBean" class="example.spring.springConcept.Calculator" scope="prototype">
+            <property name="translator" ref="translatorBean"/>
+        </bean>
+        <bean id="translatorBean" class="example.spring.springConcept.Translator"/>
+
+
+    </beans>

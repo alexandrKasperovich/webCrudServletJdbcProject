@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>firstServlet</servlet-name>
+        <servlet-class>by.alex.kasperovich.servlet.HomeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>firstServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>PersonListServlet</servlet-name>
+        <servlet-class>by.alex.kasperovich.servlet.person.PersonListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PersonListServlet</servlet-name>
+        <url-pattern>/person/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonCreateServlet</servlet-name>
+        <servlet-class>by.alex.kasperovich.servlet.person.PersonCreateServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PersonCreateServlet</servlet-name>
+        <url-pattern>/person/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>coffee</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>coffee</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
